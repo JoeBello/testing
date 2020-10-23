@@ -9,7 +9,7 @@ const service = require('./src/service');
 /* eslint-disable */
 exports.run = function(eventData) {
 /* eslint-enable */
-
+	// a small change here
 	if (eventData.request.method !== 'POST') {
 		return eventData.response.status(404).send('Not found');
 	}
