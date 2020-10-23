@@ -1,0 +1,50 @@
+{
+  "environments": {
+    "dev": {
+      "access_token": "{{ DEV ACCESS TOKEN }}",
+      "plugins": {
+        "client": {
+          "id": "{{ DEV ID }}",
+          "namespace": "{{ DEV NAMESPACE }}",
+          "route": "/{{ DEV ROUTE }}",
+          "services": {
+            "webhook": {
+              "id": "{{DEV SERVICE ID}}"
+            }
+          }
+        }
+      }
+    },
+    "stage": {
+      "access_token": "{{ STAGE ACCESS TOKEN }}",
+      "plugins": {
+        "client": {
+          "id": "{{ STAGE ID }}",
+          "namespace": "{{ STAGE NAMESPACE }}",
+          "route": "/{{ STAGE ROUTE }}",
+          "services": {
+            "webhook": {
+              "id": "{{STAGE SERVICE ID}}"
+            }
+          }
+        }
+      },
+      "default": true
+    },
+    "prod": {
+      "access_token": "{{ PROD ACCESS TOKEN }}",
+      "plugins": {
+        "client": {
+          "id": "{{ ID }}",
+          "namespace": "{{ NAMESPACE }}",
+          "route": "/{{ ROUTE }}",
+          "services": {
+            "webhook": {
+              "id": "{{PROD SERVICE ID}}"
+            }
+          }
+        }
+      }
+    }
+  }
+}

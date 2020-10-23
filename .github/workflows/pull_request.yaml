@@ -1,0 +1,39 @@
+on: pull_request
+name: Pull Request Runner
+jobs:
+  frontend:
+    name: Run Frontend Lint
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+
+    steps:
+    - uses: Wizehive/checkout@master
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: Wizehive/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: cd plugins/client && npm install && npm run lint-src
+      env:
+        CI: true
+  backend:
+    name: Run Backend Lint/Test
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+
+    steps:
+    - uses: Wizehive/checkout@master
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: Wizehive/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: cd backend/integration && npm install && npm run lint && npm run test
+      env:
+        CI: true

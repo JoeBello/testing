@@ -1,0 +1,6 @@
+/_runner/*
+/lib/*
+dist
+maya_build
+node_modules
+

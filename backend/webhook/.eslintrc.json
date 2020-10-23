@@ -1,0 +1,34 @@
+{
+	"env": {
+		"es2017": true,
+		"node": true,
+		"jasmine": true
+	},
+	"extends": [
+		"eslint:recommended"
+	],
+	"globals": {
+		"Nock": "readonly",
+		"Sinon": "readonly",
+		"expect": "readonly",
+		"assert": "readonly",
+		"fail": "readonly"
+	},
+	"rules": {
+		"curly": "error",
+		"dot-location": ["error", "property"],
+		"dot-notation": "error",
+		"guard-for-in":"error",
+		"indent": ["error", "tab", { "SwitchCase": 0 }],
+		"no-empty-function": "error",
+		"no-eval": "error",
+		"no-extra-parens": ["error", "all"],
+		"no-extra-semi": "error",
+		"no-magic-numbers": "error",
+		"no-multi-spaces": "error",
+		"no-return-assign": ["error", "always"],
+		"no-tabs": ["error", { "allowIndentationTabs": true }],
+		"semi": ["error", "always"],
+		"yoda": "error"
+	}
+}
