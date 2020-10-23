@@ -11,7 +11,7 @@ jobs:
         node-version: [10.x, 12.x]
 
     steps:
-    - uses: Wizehive/checkout@nope
+    - uses: Wizehive/checkout@stage
     - name: Use Node.js ${{ matrix.node-version }}
       uses: Wizehive/setup-node@v1
       with:
@@ -29,7 +29,7 @@ jobs:
         node-version: [10.x, 12.x]
 
     steps:
-    - uses: Wizehive/checkout@nope
+    - uses: Wizehive/checkout@stage
     - name: Use Node.js ${{ matrix.node-version }}
       uses: Wizehive/setup-node@v1
       with:
